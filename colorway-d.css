@@ -1,0 +1,73 @@
+/* Colorway D — C plus gradient atmosphere (owner mentioned gradients on the
+   call; her old site was gradient-heavy, so this is continuity done with
+   restraint). Identical tokens to C; the only addition is soft directional
+   gradients on ENVIRONMENT surfaces — page, hero, section bands, the green
+   strip. Cards, buttons and controls stay flat (playful content, calm
+   controls). All gradient endpoints contrast-validated; interpolated values
+   sit between validated endpoints by construction (worst pair 4.63, on a
+   band that carries no green text). */
+
+html[data-colorway='d'] {
+  --paper: #ffe894;
+  --paper-dark: #c9e5f4;
+  --rust: #8c430d;
+}
+
+/* page: sunlight glow from the top, dot grain kept */
+html[data-colorway='d'] body {
+  background:
+    radial-gradient(rgba(43, 29, 16, 0.04) 1.1px, transparent 1.1px) 0 0 / 26px 26px,
+    linear-gradient(180deg, #fff3c9 0%, #ffe894 420px),
+    var(--paper);
+}
+
+/* hero: sunlight gradient — value-only within the yellow family (designer
+   feedback: blue dissolving into yellow read as a muddled seam; the rule
+   site-wide is now "gradients move value, never hue" — blue lives in its
+   own bands, not blended into the sun) */
+html[data-colorway='d'] .hero {
+  background:
+    radial-gradient(circle at 85% 65%, rgba(252, 132, 36, 0.1), transparent 45%),
+    linear-gradient(180deg, #fff3c9 0%, #ffe894 100%);
+}
+
+/* sky bands become sky: light at the top, deeper toward the ground line */
+html[data-colorway='d'] .story,
+html[data-colorway='d'] .why,
+html[data-colorway='d'] .k-flavor {
+  background: linear-gradient(180deg, #d8ecf8 0%, #bfe0f2 100%);
+}
+
+/* green strip: gentle top-light so the panel reads dimensional */
+html[data-colorway='d'] .play-grid {
+  background: linear-gradient(180deg, #387b3d 0%, #2b6230 100%);
+}
+
+/* kickers: white pills, sky pop on page heroes (same as C) */
+html[data-colorway='d'] .kicker {
+  background: #ffffff;
+}
+
+html[data-colorway='d'] .hero .kicker,
+html[data-colorway='d'] .k-hero .kicker,
+html[data-colorway='d'] .play-page .kicker,
+html[data-colorway='d'] .lost .kicker {
+  background: #a9d7ef;
+}
+
+/* single filled CTA (same as C) */
+html[data-colorway='d'] .nav-cta .btn-play {
+  background: var(--card);
+  color: var(--green);
+}
+
+html[data-colorway='d'] .nav-cta .btn-play:hover,
+html[data-colorway='d'] .nav-cta .btn-play:focus-visible {
+  background: var(--green);
+  color: #fff;
+}
+
+html[data-colorway='d'] .site-header {
+  background: #fff3c9; /* matches the page gradient's top so the sticky
+                          header blends with the sunlight instead of cutting it */
+}

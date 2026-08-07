@@ -1,0 +1,57 @@
+/* Colorway C — "fun" (owner-directed, 2026-08-04).
+   Her words: more fun, not built around just Keeper Chaos, not the tan —
+   "even something like yellow." So: a sunny butter page with sky-blue
+   section bands (a nod to the Blue Orange reference and her old site's
+   blue), white cards, and the full accent range (orange, green, red,
+   yellow) reading as a brand-level celebration instead of one game's
+   jungle. Structure, type and layout untouched.
+
+   All pairs re-validated ≥ 4.5:1:
+   ink on butter 14.5 · ink on sky 12.4 · ink-soft on butter 7.5 /
+   sky 6.4 · rust #8c430d on butter 6.4 / white 7.2 / sky 5.5 ·
+   green on butter 5.7 · ink on yellow 11.4 / orange 6.6. */
+
+html[data-colorway='c'] {
+  --paper: #ffe894;       /* sunny yellow page (deepened from #fff1c4 — the
+                             lighter tint still read as cream on phones) */
+  --paper-dark: #c9e5f4;  /* sky-blue section bands (was the tan) */
+  --rust: #8c430d;        /* darkened for the lighter grounds */
+}
+
+/* dot grain on butter, slightly softer than the cream original */
+html[data-colorway='c'] body {
+  background:
+    radial-gradient(rgba(43, 29, 16, 0.04) 1.1px, transparent 1.1px) 0 0 / 26px 26px,
+    var(--paper);
+}
+
+/* kickers: white pills read crisply on both butter and sky… */
+html[data-colorway='c'] .kicker {
+  background: #ffffff;
+}
+
+/* …page-hero kickers get a sky pop instead (yellow-on-butter would vanish) */
+html[data-colorway='c'] .hero .kicker,
+html[data-colorway='c'] .k-hero .kicker,
+html[data-colorway='c'] .play-page .kicker,
+html[data-colorway='c'] .lost .kicker {
+  background: #a9d7ef;
+}
+
+/* single filled CTA carried over from colorway B (conversion consensus):
+   header Play Online stays an outline button */
+html[data-colorway='c'] .nav-cta .btn-play {
+  background: var(--card);
+  color: var(--green);
+}
+
+html[data-colorway='c'] .nav-cta .btn-play:hover,
+html[data-colorway='c'] .nav-cta .btn-play:focus-visible {
+  background: var(--green);
+  color: #fff;
+}
+
+/* theme-color meta is baked; keep the page edge tidy on butter */
+html[data-colorway='c'] .site-header {
+  background: var(--paper);
+}
